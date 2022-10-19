@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class QuartoExercicio{
+    
+    public static void main(String[] args){
+        Scanner teclado = new Scanner(System.in);
+        
+        double primeiraNota, segundaNota, terceiraNota, primeiroPeso, segundoPeso, terceiroPeso, resultado;
+        
+        System.out.println("Digite as notas e seus respectivos pesos(podendo conter números decimais):");
+        
+        primeiraNota = teclado.nextDouble();
+        primeiroPeso = teclado.nextDouble();
+        
+        segundaNota = teclado.nextDouble();
+        segundoPeso = teclado.nextDouble();
+        
+        terceiraNota = teclado.nextDouble();
+        terceiroPeso = teclado.nextDouble();
+
+        resultado = ((primeiraNota*primeiroPeso)+(segundaNota*segundoPeso)+(terceiraNota*terceiroPeso)) / (primeiroPeso + segundoPeso + terceiroPeso);
+        
+        System.out.printf("A média das notas foi: %.2f",resultado);
+    }
+    
+}

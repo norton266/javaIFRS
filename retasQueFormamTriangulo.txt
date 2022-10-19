@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class C04{
+    public static void main (String[] args){
+        Scanner input = new Scanner (System.in);
+        
+        int ladoA, ladoB, ladoC;
+        
+        System.out.println("Digite 3 valores:");
+        ladoA = input.nextInt();
+        ladoB = input.nextInt();
+        ladoC = input.nextInt();
+        
+        if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0){
+            System.out.println("Inválido");
+            System.exit(0);
+        }
+        
+        if (ladoA + ladoB > ladoC && ladoB + ladoC > ladoA && ladoA + ladoC > ladoB){
+            System.out.println("Sim");
+        } else {
+            System.out.println("Não");
+        }
+        
+        
+        
+        
+    }
+}

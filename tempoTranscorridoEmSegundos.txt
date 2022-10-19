@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class NonoExercicio{
+    
+    public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        int horas, minutos, segundos, resultado;
+        
+
+        horas = input.nextInt();
+        
+
+        minutos = input.nextInt();
+        
+
+        segundos = input.nextInt();
+        
+        resultado = (horas*3600) + (minutos*60) + segundos;
+        
+        System.out.println(resultado);
+    }
+}

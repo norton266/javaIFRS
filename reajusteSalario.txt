@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SextoExercicio{
+    
+    public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        double salario, percentual, porcentagem, conta, resultado;
+        
+        System.out.println("Digite o salário atual:");
+        salario = input.nextDouble();
+        
+        System.out.println("Digite o percentual do ajuste:");
+        percentual = input.nextDouble();
+        porcentagem = percentual/100;
+        conta = salario*porcentagem;
+        
+        resultado = salario+conta;
+        
+        System.out.printf("O salário foi reajustado para: R$ %.2f",resultado);
+        
+    }
+    
+}

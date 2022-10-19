@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class DecimoExercicio{
+    
+    public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        int entrada;
+        int calc100=0;
+        int calc20=0;
+        int calc5=0;
+        int calc1=0;
+        int i,j,k,l;
+        
+        System.out.println("Digite um valor inteiro para saque (Notas de 100, 20, 5 e 1):");
+        entrada = input.nextInt();
+        
+        for(i = entrada; i >= 100; i = i - 100){
+            calc100++;
+            entrada = entrada - 100;
+        }
+        
+        for(j = entrada; j >= 20 && j < 100; j = j - 20){
+            calc20++;
+            entrada = entrada - 20;
+        }
+        
+        for(k = entrada; k >= 5 && k < 20; k = k - 5){
+            calc5++;
+            entrada = entrada - 5;
+        }
+        
+        for(l = entrada; l >= 1 && l < 5; l = l - 1){
+            calc1++;
+            entrada = entrada - 1;
+        }
+        
+        System.out.println(calc100 + " de 100");
+        System.out.println(calc20 + " de 20");
+        System.out.println(calc5 + " de 5");
+        System.out.println(calc1 + " de 1");
+    }
+}

@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class C07{
+    public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        int horaInicio, minutoInicio, horaFim, minutoFim, resultado;
+        int resultadoMinuto = 0;
+        int resultadoHora = 0;
+        
+        System.out.println("");
+        horaInicio = input.nextInt();
+        minutoInicio = input.nextInt();
+        horaFim = input.nextInt();
+        minutoFim = input.nextInt();
+        
+        if (horaInicio < 0 || horaFim < 0 || minutoInicio < 0 || minutoFim < 0){
+            System.out.println("-");
+            System.exit(0);
+        }
+        
+        if (horaInicio < horaFim){
+            if (horaInicio >= 0 && minutoInicio >= 0 && horaFim >= 0 && minutoFim >= 0 ){
+                if (minutoInicio < minutoFim){
+                    resultadoMinuto = minutoFim - minutoInicio;
+                }
+                
+                if (minutoInicio > minutoFim){
+                    resultadoMinuto = (60 - minutoInicio) + minutoFim;
+                    resultadoHora = resultadoHora - 1;
+                }
+                
+                resultadoHora = resultadoHora + horaFim - horaInicio;
+                
+                System.out.printf("%d:%02d%n", resultadoHora, resultadoMinuto);
+                
+            }
+        }
+        
+        if (horaInicio > horaFim){
+            if (horaInicio >= 0 && minutoInicio >= 0 && horaFim >= 0 && minutoFim >= 0 ){
+                if (minutoInicio < minutoFim){
+                    resultadoMinuto =  minutoInicio - minutoFim;
+                    if (resultadoMinuto < 0){
+                        resultadoMinuto = resultadoMinuto * (-1);
+                    }
+                }
+                
+                if (minutoInicio > minutoFim){
+                    resultadoMinuto = (60 - minutoInicio) + minutoFim;
+                    resultadoHora = resultadoHora - 1;
+                }
+                
+                resultadoHora = (resultadoHora + 24 - horaInicio) + horaFim;
+
+                
+                System.out.printf("%d:%02d%n", resultadoHora, resultadoMinuto);
+            }
+        }
+        
+        if (horaInicio == horaFim && minutoInicio == minutoFim){
+            resultadoHora = 24;
+            resultadoMinuto = 00;
+            
+            System.out.printf("%d:%02d%n", resultadoHora, resultadoMinuto);
+        }
+        
+    }
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class QuintoExercicio{
+ 
+ public static void main (String[] args){
+    Scanner input = new Scanner(System.in);
+     
+    int diametro,raio;
+    double pi = 3.1415;
+    double areaDoCirculo;
+     
+    System.out.println("Digite um valor inteiro para o diâmetro do círculo:");
+     
+    diametro = input.nextInt();
+    raio = diametro/2;
+     
+    areaDoCirculo = pi*(raio*raio);
+    
+    System.out.printf("A área do círculo é: %.2f",areaDoCirculo);
+     
+     
+ }
+    
+}

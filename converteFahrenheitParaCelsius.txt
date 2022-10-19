@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SetimoExercicio{
+    
+    public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        double celsius, fahrenheit;
+        
+        System.out.println("Digite a temperatura em Fahrenheit:");
+        fahrenheit = input.nextDouble();
+        
+        celsius = (fahrenheit -32) / 1.8;
+        
+        System.out.printf("A temperatura em Celsius é: %.1f °", celsius);
+        
+        
+    }
+}

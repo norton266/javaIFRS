@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ExercicioViagem{
+    
+    public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        double kmLitros, valorGas, distanciaPercorrida, numeroPedagio, valorPedagio, resultado;
+        
+        System.out.println("Quantos Km seu carro faz por litro?");
+        kmLitros = input.nextDouble();
+        
+        System.out.println("Qual o valor do litro de combustível?");
+        valorGas = input.nextDouble();
+        
+        System.out.println("Qual a distância que irá percorrer (em kilometros)?");
+        distanciaPercorrida = input.nextDouble();
+        
+        System.out.println("Quantos pedágios existem no trajeto?");
+        numeroPedagio = input.nextDouble();
+        
+        System.out.println("Qual o valor unitário do pedágio?");
+        valorPedagio = input.nextDouble();
+        
+        resultado = (distanciaPercorrida/kmLitros*valorGas) + valorPedagio*numeroPedagio;
+        
+        System.out.printf("Você irá gastar R$ %.2f nesta viagem.",resultado);
+    }
+}
