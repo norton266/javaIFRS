@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class M02{
+    
+    //public static Scanner input = new Scanner(System.in);
+    
+    public static void main (String[] args){
+        double v[] = new double[lerValor()];
+        v[0] = lerDouble();
+        
+        mostraVetor(v);
+    }
+
+    public static int lerValor(){
+        Scanner input = new Scanner(System.in);
+        int tamanho = input.nextInt();
+        if(tamanho <= 0){
+            System.out.print("-");
+            System.exit(0);
+        }
+        return tamanho;
+    }
+    public static double lerDouble(){
+        Scanner input = new Scanner(System.in);
+        double valor = input.nextDouble();
+        return valor;
+    }
+    public static void mostraVetor(double[] v){
+        for(int i = 1; i < v.length; i++){
+            v[i] = v[i - 1] / 2;
+        }
+        for(int i = 0; i < v.length; i++){
+            System.out.printf("v[%d] = %1.4f \n", i, v[i]);
+        }
+    }
+}
